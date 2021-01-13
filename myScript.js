@@ -20,20 +20,31 @@ function myClick () {
   var fname = document.getElementById('fname').value;
   var lname = document.getElementById('lname').value;
   console.log(fname, lname);
+
+  myJSON = {
+    "fname": fname,
+    "lname": lname,
+    "work": work.checked,
+    "spirit": spiritYes.checked,
+  }
+  console.log(myJSON);
+  console.log(JSON.stringify(myJSON));
+  console.log(JSON.parse(JSON.stringify(myJSON)));
+
   // By using = we *replace* the entire contents of the div tag.
   myDiv.innerHTML = "\n";
   // Now, using += we are *appending* to the new contents of the div tag.
   myDiv.innerHTML += "\t\t<h1>Whoa.</h1>\n"
   // Notice mixing of quotation marks, just like in Python.
   myDiv.innerHTML += "\t\t<img src='default.png' height=300/>\n";
-  if (work.checked) {
+  if (myJSON['work']) {
     // Notice here that we are appending the values of the variables.
-    myDiv.innerHTML += "\t\t<p>" + fname + " " + lname + "</p>\n";
+    myDiv.innerHTML += "\t\t<p>" + myJSON['fname'] + " " + myJSON['lname'] + "</p>\n";
     myDiv.innerHTML += "<p>Box was checked.</p>\n";
   } else {
     myDiv.innerHTML += "\t\t<p>Box not checked.</p>\n";
   }
-  if (spirit.checked) {
+  if (myJSON['spirit']) {
     myDiv.innerHTML += "\t\t<p>Feeling the Spirit of Radio.</p>\n";
   } else {
     myDiv.innerHTML += "\t\t<p>Not Feeling the Spirit of Radio.</p>\n";
