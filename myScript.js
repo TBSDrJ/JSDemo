@@ -5,8 +5,12 @@ console.log(myDiv);
 work = document.getElementById("work");
 console.log(work);
 
-spirit = document.getElementById("spirit");
-console.log(Object.getPrototypeOf(spirit));
+spiritYes = document.getElementById("spiritYes");
+console.log(spiritYes);
+
+console.log(document.getElementById("spiritNo"));
+
+
 
 // Click event to attach to button
 function myClick () {

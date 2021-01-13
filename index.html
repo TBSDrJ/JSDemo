@@ -27,8 +27,19 @@
         <label for='work'>Does this work?</label>
         <input id='work' name='work' type='checkbox' onclick='boxClick()' />
         <br />
-        <label for='spirit'>Feel the Spirit of Radio?</label>
-        <input id='spirit' name='spirit' type='radio' />
+        <!-- With radio buttons, need different id and name -->
+        <!-- The name field is used for grouping -->
+        Feel the Spirit of Radio?
+        <ul>
+          <li>
+            <label for="spiritYes">Yes</label>
+            <input id='spiritYes' name='spirit' type='radio' value='Yes' />
+          </li>
+          <li>
+            <label for="spiritNo">No</label>
+            <input id='spiritNo' name='spirit' type='radio' value='No' />
+          </li>
+        </ul>
       </p>
       <button onclick='myClick()'>I'm a button, click me!</button>
     </div>
