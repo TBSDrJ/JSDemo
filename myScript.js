@@ -15,11 +15,9 @@ console.log(document.getElementById("spiritNo"));
 // Click event to attach to button
 function myClick () {
   // Quick check to verify that the function executes.
-  console.log("test function");
   // Get the values that were input into the two text boxes.
   var fname = document.getElementById('fname').value;
   var lname = document.getElementById('lname').value;
-  console.log(fname, lname);
 
   myJSON = {
     "fname": fname,
@@ -27,9 +25,6 @@ function myClick () {
     "work": work.checked,
     "spirit": spiritYes.checked,
   }
-  console.log(myJSON);
-  console.log(JSON.stringify(myJSON));
-  console.log(JSON.parse(JSON.stringify(myJSON)));
 
   // By using = we *replace* the entire contents of the div tag.
   myDiv.innerHTML = "\n";
@@ -53,4 +48,12 @@ function myClick () {
 
 function boxClick() {
   console.log(work.checked);
+}
+
+function myMouseOver() {
+  document.getElementById('fname').style.backgroundColor = "blue"
+}
+
+function myMouseOut() {
+  document.getElementById('fname').style.backgroundColor = ""
 }

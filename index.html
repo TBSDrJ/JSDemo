@@ -19,13 +19,12 @@
         <!-- Each label must be matched to an input -->
         <label for='fname'>First Name:</label>
         <!-- Good practice: give same name and id for every input -->
-        <input id='fname' name='fname' type='text' />
+        <input id='fname' name='fname' type='text' onmouseover='myMouseOver()' onmouseout='myMouseOut()'/>
         <br />
         <label for='lname'>Last Name:</label>
         <input id='lname' name='lname' type='text' />
         <br />
         <label for='work'>Does this work?</label>
-        <input id='work' name='work' type='checkbox' onclick='boxClick()' />
         <br />
         <!-- With radio buttons, need different id and name -->
         <!-- The name field is used for grouping -->
